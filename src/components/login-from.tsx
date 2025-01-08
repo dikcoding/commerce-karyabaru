@@ -4,8 +4,7 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "./ui/card";
-
+} from "@/components/ui/card";
 import SigninGoogleButton from "./pages/auth/SigninGoogleButton";
 import FormSigninAdmin from "./pages/auth/FromSiginAdmin";
 

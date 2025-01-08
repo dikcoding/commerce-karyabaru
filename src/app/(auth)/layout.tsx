@@ -1,7 +1,7 @@
-import React, { ReactNode } from "react";
+import { ReactNode } from "react";
 
 function AuthRootLayout({ children }: { children: ReactNode }) {
-  return <div>{children}</div>;
+  return <>{children}</>;
 }
 
 export default AuthRootLayout;

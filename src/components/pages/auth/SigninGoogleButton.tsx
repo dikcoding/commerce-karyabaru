@@ -1,12 +1,12 @@
 import { Button } from "../../ui/button";
-// import { signIn } from "@/../auth";
+import { signIn } from "@/../auth";
 
 function SigninGoogleButton() {
   return (
     <form
       action={async () => {
         "use server";
-        // await signIn("google", { redirectTo: "/costumer" });
+        await signIn("google", { redirectTo: "/costumer" });
       }}
     >
       {" "}
