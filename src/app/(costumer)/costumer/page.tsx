@@ -1,9 +1,10 @@
 import React from "react";
+import { ProductCard } from "@/components/pages/costumer/CardProduct";
 
 function page() {
   return (
     <div>
-      <h1>Product</h1>
+      <ProductCard />
     </div>
   );
 }
