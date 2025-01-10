@@ -9,6 +9,7 @@ import {
 import { Badge } from "@/components/ui/badge";
 import Image from "next/legacy/image";
 import Link from "next/link";
+import AddToCart from "./AddToCart";
 
 export function ProductCard() {
   return (
@@ -37,16 +38,11 @@ export function ProductCard() {
       <CardFooter className="flex flex-col space-y-2">
         <Link
           href=""
-          className="w-full bg-sky-500 text-white rounded-sm py-2 text-center hover:bg-sky-600"
+          className="w-full bg-sky-500 text-white text-base rounded-sm py-2 text-center hover:bg-sky-600"
         >
           Detail Produk
         </Link>
-        <Link
-          href=""
-          className="w-full bg-sky-500 text-white rounded-sm py-2 text-center hover:bg-sky-600"
-        >
-          Add to Cart
-        </Link>
+        <AddToCart />
       </CardFooter>
     </Card>
   );
