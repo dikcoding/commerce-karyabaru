@@ -14,7 +14,7 @@ function AddToCart() {
   return (
     <Button
       onClick={addProduct}
-      className="w-full bg-sky-500 text-white text-base rounded-sm py-2 text-center hover:bg-sky-600"
+      className="w-full bg-green-500 text-white text-base rounded-sm py-2 text-center hover:bg-green-600"
     >
       Tambah ke Cart
     </Button>
