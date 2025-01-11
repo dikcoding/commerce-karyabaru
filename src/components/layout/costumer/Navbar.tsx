@@ -2,9 +2,8 @@ import Image from "next/image";
 import logo from "@/../public/logo.png";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import Signout from "@/components/pages/auth/signout";
 
 const menus = [
   {
@@ -42,6 +41,23 @@ export default async function Navbar() {
             </div>
             <p className="ml-2"> DiCommerce</p>
           </Link>
+          <div className="flex flex-col gap-2 py-6 h-full">
+            <div className="flex flex-col gap-2">
+              {menus.map((menu) => (
+                <Link
+                  href={menu.src}
+                  key={menu.src}
+                  className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-white px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-gray-100/50 data-[state=open]:bg-gray-100/50 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus:bg-gray-800 dark:focus:text-gray-50 dark:data-[active]:bg-gray-800/50 dark:data-[state=open]:bg-gray-800/50"
+                  prefetch={false}
+                >
+                  {menu.name}
+                </Link>
+              ))}
+            </div>
+            <div className="flex-1 justify-self-end">
+              <Signout />
+            </div>
+          </div>
         </SheetContent>
       </Sheet>
       <Link href="/costumer" className="m-4 hidden lg:flex">
@@ -60,7 +76,7 @@ export default async function Navbar() {
             {menu.name}
           </Link>
         ))}
-        {/* {session?.user ? <Signout /> : <SigninGoogleButton />} */}
+        <Signout />
       </nav>
     </header>
   );
