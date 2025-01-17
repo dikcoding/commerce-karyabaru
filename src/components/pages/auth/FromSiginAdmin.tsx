@@ -1,10 +1,10 @@
 "use client";
 import { useForm } from "react-hook-form";
+import { Label } from "@/components/ui/label";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Button } from "@/components/ui/button";
 import { signIn } from "next-auth/react";
 
 interface LoginFormValues {
@@ -21,7 +21,7 @@ export default function FormSigninAdmin() {
   } = useForm<LoginFormValues>();
 
   const onSubmit = async (data: LoginFormValues) => {
-    if (data.email === "dika@dicommerce.com" && data.password == "uinsu123") {
+    if (data.email === "admin@gmail.com" && data.password == "admin123") {
       await signIn("credentials", { ...data, redirect: false });
       toast.success("Kamu Berhasil Login sebagai Admin.");
       return router.push("/admin/product/list");

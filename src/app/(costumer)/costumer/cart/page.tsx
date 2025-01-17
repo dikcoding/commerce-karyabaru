@@ -3,6 +3,7 @@ import React from "react";
 export default function CostumerCart() {
   return (
     <section className="flex flex-col gap-4 px-4">
+      <div></div>
       <div className="flex justify-between items-center mb-4">
         <h1 className="text-2xl lg:text-3xl font-bold">
           Produk yang kamu pilih
